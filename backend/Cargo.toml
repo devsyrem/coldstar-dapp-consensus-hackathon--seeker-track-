@@ -1,0 +1,61 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/coldstar-crypto",
+    "crates/coldstar-core",
+    "crates/coldstar-signer",
+    "crates/coldstar-transport",
+    "crates/coldstar-session",
+    "crates/coldstar-rpc",
+    "crates/coldstar-ffi",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "MIT"
+
+[workspace.dependencies]
+# Solana
+solana-sdk = "2"
+solana-client = "2"
+solana-transaction-status = "2"
+
+# Crypto
+aes-gcm = "0.10"
+argon2 = "0.5"
+ed25519-dalek = { version = "2", features = ["rand_core", "zeroize"] }
+x25519-dalek = { version = "2", features = ["static_secrets"] }
+rand = "0.8"
+sha2 = "0.10"
+zeroize = { version = "1", features = ["derive"] }
+
+# Serialization
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+serde_cbor = "0.11"
+bincode = "1"
+
+# Async
+tokio = { version = "1", features = ["full"] }
+reqwest = { version = "0.12", features = ["json", "rustls-tls"], default-features = false }
+
+# Errors
+thiserror = "2"
+anyhow = "1"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = "0.3"
+
+# FFI
+uniffi = "0.29"
+
+# Misc
+hex = "0.4"
+base64 = "0.22"
+bs58 = "0.5"
+jni = { version = "0.21", default-features = false }
+openssl = { version = "0.10", features = ["vendored"] }
+chrono = { version = "0.4", features = ["serde"] }
+uuid = { version = "1", features = ["v4"] }

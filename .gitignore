@@ -1,0 +1,27 @@
+# macOS
+.DS_Store
+
+# Node/Vite
+node_modules/
+dist/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python virtual env
+.venv/
+
+# Android/Gradle generated files
+android/.gradle/
+android/build/
+android/**/build/
+
+# Rust/Cargo generated files
+backend/target/
+
+# Env/secrets
+.env
+.env.*
+!.env.example
+node_modules

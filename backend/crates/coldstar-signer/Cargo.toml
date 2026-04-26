@@ -1,0 +1,15 @@
+[package]
+name = "coldstar-signer"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+coldstar-crypto = { path = "../coldstar-crypto" }
+coldstar-core = { path = "../coldstar-core" }
+coldstar-session = { path = "../coldstar-session" }
+ed25519-dalek = { workspace = true }
+zeroize = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+bs58 = { workspace = true }

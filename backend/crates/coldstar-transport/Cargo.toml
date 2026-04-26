@@ -1,0 +1,15 @@
+[package]
+name = "coldstar-transport"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+coldstar-core = { path = "../coldstar-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+serde_cbor = { workspace = true }
+bincode = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+sha2 = { workspace = true }
+base64 = { workspace = true }

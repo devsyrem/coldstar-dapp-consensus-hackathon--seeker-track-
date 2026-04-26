@@ -1,0 +1,24 @@
+[package]
+name = "coldstar-ffi"
+version.workspace = true
+edition.workspace = true
+
+[lib]
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+coldstar-crypto = { path = "../coldstar-crypto" }
+coldstar-core = { path = "../coldstar-core" }
+coldstar-signer = { path = "../coldstar-signer" }
+coldstar-transport = { path = "../coldstar-transport" }
+coldstar-session = { path = "../coldstar-session" }
+coldstar-rpc = { path = "../coldstar-rpc" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }
+rand = { workspace = true }
+bs58 = { workspace = true }
+jni = { workspace = true }
+openssl = { workspace = true }

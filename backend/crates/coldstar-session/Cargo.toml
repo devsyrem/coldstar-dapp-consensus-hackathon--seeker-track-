@@ -1,0 +1,15 @@
+[package]
+name = "coldstar-session"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+coldstar-crypto = { path = "../coldstar-crypto" }
+x25519-dalek = { workspace = true }
+rand = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+zeroize = { workspace = true }
