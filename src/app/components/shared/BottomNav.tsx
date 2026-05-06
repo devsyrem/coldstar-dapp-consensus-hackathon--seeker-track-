@@ -1,13 +1,10 @@
-import { Home, History, Layers, Compass, Coins } from 'lucide-react';
+import { Home, History } from 'lucide-react';
 import { Link, useLocation } from 'react-router';
 import { motion } from 'motion/react';
 
 const tabs = [
   { id: 'home', label: 'Home', icon: Home, path: '/app' },
-  { id: 'rwa', label: 'Assets', icon: Coins, path: '/app/rwa' },
   { id: 'history', label: 'History', icon: History, path: '/app/history' },
-  { id: 'stake', label: 'Stake', icon: Layers, path: '/app/stake' },
-  { id: 'explore', label: 'Explore', icon: Compass, path: '/app/explore' },
 ];
 
 export function BottomNav() {

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router';
-import { Plus, Copy, Check, Wallet, Usb, Trash2, Shield } from 'lucide-react';
+import { Plus, Copy, Check, Wallet, Usb, Trash2 } from 'lucide-react';
 import {
   Sheet,
   SheetContent,
@@ -72,11 +72,6 @@ export function WalletDrawer({ open, onOpenChange }: WalletDrawerProps) {
     sessionStorage.setItem('coldstar_creating_new_wallet', 'true');
     onOpenChange(false);
     navigate('/');
-  };
-
-  const handleBackup = () => {
-    onOpenChange(false);
-    navigate('/onboarding/backup');
   };
 
   return (
@@ -190,24 +185,15 @@ export function WalletDrawer({ open, onOpenChange }: WalletDrawerProps) {
           )}
         </div>
 
-        {/* Create / Backup Buttons */}
-        <div className="p-4 border-t border-white/10 flex flex-row gap-2">
+        {/* Create Button */}
+        <div className="p-4 border-t border-white/10">
           <button
             onClick={handleCreateNew}
-            className="flex-1 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center gap-2 text-white font-medium text-sm hover:bg-white/10 active:scale-[0.98] transition-all"
+            className="w-full h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center gap-2 text-white font-medium text-sm hover:bg-white/10 active:scale-[0.98] transition-all"
           >
             <Plus className="w-4 h-4 text-emerald-400" />
             New Wallet
           </button>
-          {registry.length > 0 && (
-            <button
-              onClick={handleBackup}
-              className="flex-1 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center gap-2 text-white font-medium text-sm hover:bg-white/10 active:scale-[0.98] transition-all"
-            >
-              <Shield className="w-4 h-4 text-amber-400" />
-              Backup Keys
-            </button>
-          )}
         </div>
       </SheetContent>
     </Sheet>
