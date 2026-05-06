@@ -1,6 +1,6 @@
 # Coldstar Wallet
 
-Repository: https://github.com/devsyrem/coldstar-dapp
+Repository: https://github.com/devsyrem/coldstar
 
 Coldstar is a mobile-first Solana wallet experience designed around one simple idea: everyday usability with an extra layer of physical control through a USB device.
 
