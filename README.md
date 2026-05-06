@@ -4,6 +4,9 @@ Repository: https://github.com/devsyrem/coldstar
 
 Coldstar is a mobile-first Solana wallet experience designed around one simple idea: everyday usability with an extra layer of physical control through a USB device.
 
+INSTALLATION:
+Open this repo on a mobile device, and go to releases. Then download the ZIP folder, unzip and install the APK files. 
+
 This project is currently a prototype. It is great for testing flows, design, and product direction, but it should not yet be treated as a production-ready custody product.
 
 ## Table of Contents
